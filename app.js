@@ -161,19 +161,19 @@ function initGsapScrollAnimations(prefersReducedMotion) {
   gsap.registerPlugin(ScrollTrigger);
 
   if (prefersReducedMotion) {
-    // Accessible, simple scroll-linked fade animations for all cards
+    // Accessible, simple fade-in animations for all cards triggered once when visible
     const allCards = document.querySelectorAll('.moments-editorial .moment-card, .gallery-editorial .gallery-card, .w-card-20-caption');
     allCards.forEach(card => {
       gsap.fromTo(card, 
         { opacity: 0 },
         {
           opacity: 1,
-          ease: 'none',
+          duration: 0.5,
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: card,
-            start: 'top 95%',
-            end: 'bottom 25%',
-            scrub: true
+            start: 'top 90%',
+            once: true
           }
         }
       );
@@ -181,165 +181,81 @@ function initGsapScrollAnimations(prefersReducedMotion) {
     return;
   }
 
-  // Section 1: OUR MOMENTS, OUR MEMORIES (12 custom transition timelines)
-  const momentsCards = document.querySelectorAll('.moments-editorial .moment-card');
-  momentsCards.forEach((card, index) => {
-    let fromState = {};
-    let toState = { opacity: 1, x: 0, y: 0, scale: 1, clipPath: 'inset(0% 0% 0% 0%)', ease: 'none' };
-    
-    switch (index) {
-      case 0: // Image 1: Fade + slide upward
-        fromState = { opacity: 0, y: 80 };
-        break;
-      case 1: // Image 2: Reveal from the left
-        fromState = { opacity: 0, x: -80 };
-        break;
-      case 2: // Image 3: Scale from 0.90 -> 1
-        fromState = { opacity: 0, scale: 0.9 };
-        break;
-      case 3: // Image 4: Reveal from the right
-        fromState = { opacity: 0, x: 80 };
-        break;
-      case 4: // Image 5: Vertical clip reveal
-        fromState = { opacity: 0, clipPath: 'inset(100% 0% 0% 0%)' };
-        break;
-      case 5: // Image 6: Subtle parallax
-        fromState = { opacity: 0, y: 40, scale: 0.95 };
-        break;
-      case 6: // Image 7: Fade + scale
-        fromState = { opacity: 0, scale: 0.85 };
-        break;
-      case 7: // Image 8: Reveal from bottom
-        fromState = { opacity: 0, y: 100 };
-        break;
-      case 8: // Image 9: Slide slightly from the left
-        fromState = { opacity: 0, x: -50 };
-        break;
-      case 9: // Image 10: Organic mask reveal
-        fromState = { opacity: 0, clipPath: 'inset(0% 100% 0% 0%)' };
-        break;
-      case 10: // Image 11: Subtle zoom/parallax
-        fromState = { opacity: 0.2, scale: 1.15 };
-        toState.scale = 1.0;
-        break;
-      case 11: // Image 12: Fade + upward reveal
-        fromState = { opacity: 0, y: 70 };
-        break;
-    }
-    
-    gsap.fromTo(card, fromState, {
-      ...toState,
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 95%',
-        end: 'bottom 25%',
-        scrub: true
-      }
+  // Section 1: OUR MOMENTS, OUR MEMORIES (Clean staggered masonry animations with reverse scroll)
+  const momentsWrappers = document.querySelectorAll('.moments-editorial .moment-card-wrapper');
+  if (momentsWrappers.length > 0) {
+    ScrollTrigger.batch(momentsWrappers, {
+      onEnter: batch => gsap.fromTo(batch, 
+        { opacity: 0, y: 70, scale: 0.94 },
+        { 
+          opacity: 1, 
+          y: 0, 
+          scale: 1, 
+          duration: 0.8, 
+          ease: "power2.out", 
+          stagger: 0.15,
+          overwrite: "auto"
+        }
+      ),
+      onLeaveBack: batch => gsap.to(batch, { 
+        opacity: 0, 
+        y: 70, 
+        scale: 0.94, 
+        duration: 0.6, 
+        ease: "power2.inOut", 
+        stagger: 0.1,
+        overwrite: "auto"
+      }),
+      onEnterBack: batch => gsap.to(batch, { 
+        opacity: 1, 
+        y: 0, 
+        scale: 1, 
+        duration: 0.8, 
+        ease: "power2.out", 
+        stagger: 0.1,
+        overwrite: "auto"
+      }),
+      start: "top 92%",
+      end: "bottom 8%"
     });
-  });
+  }
 
-  // Section 2: A WINDOW TO MILC (20 custom visual journey transitions)
-  const windowCards = document.querySelectorAll('.gallery-editorial .gallery-card');
-  windowCards.forEach((card, index) => {
-    let fromState = {};
-    let toState = { opacity: 1, x: 0, y: 0, scale: 1, clipPath: 'inset(0% 0% 0% 0%)', ease: 'none' };
-    
-    switch (index) {
-      case 0: // IMAGE 01: Fade + scale
-        fromState = { opacity: 0, scale: 0.9 };
-        break;
-      case 1: // IMAGE 02: Left reveal
-        fromState = { opacity: 0, x: -70 };
-        break;
-      case 2: // IMAGE 03: Bottom reveal
-        fromState = { opacity: 0, y: 70 };
-        break;
-      case 3: // IMAGE 04: Parallax / Zoom-in
-        fromState = { opacity: 0, y: 40, scale: 0.95 };
-        break;
-      case 4: // IMAGE 05: Right reveal
-        fromState = { opacity: 0, x: 70 };
-        break;
-      case 5: // IMAGE 06: Clip reveal
-        fromState = { opacity: 0, clipPath: 'inset(0% 0% 100% 0%)' };
-        break;
-      case 6: // IMAGE 07: Fade + upward movement
-        fromState = { opacity: 0, y: 80 };
-        break;
-      case 7: // IMAGE 08: Scale reveal
-        fromState = { opacity: 0, scale: 0.85 };
-        break;
-      case 8: // IMAGE 09: Organic mask (horizontal clip)
-        fromState = { opacity: 0, clipPath: 'inset(0% 100% 0% 0%)' };
-        break;
-      case 9: // IMAGE 10: Subtle parallax
-        fromState = { opacity: 0, y: 30, scale: 0.98 };
-        break;
-      case 10: // IMAGE 11: Left reveal
-        fromState = { opacity: 0, x: -60 };
-        break;
-      case 11: // IMAGE 12: Fade + scale
-        fromState = { opacity: 0, scale: 0.92 };
-        break;
-      case 12: // IMAGE 13: Bottom reveal
-        fromState = { opacity: 0, y: 80 };
-        break;
-      case 13: // IMAGE 14: Right reveal
-        fromState = { opacity: 0, x: 60 };
-        break;
-      case 14: // IMAGE 15: Clip reveal
-        fromState = { opacity: 0, clipPath: 'inset(100% 0% 0% 0%)' };
-        break;
-      case 15: // IMAGE 16: Parallax
-        fromState = { opacity: 0.3, y: -40 };
-        toState.y = 40;
-        break;
-      case 16: // IMAGE 17: Scale + fade
-        fromState = { opacity: 0, scale: 0.88 };
-        break;
-      case 17: // IMAGE 18: Organic reveal
-        fromState = { opacity: 0, clipPath: 'inset(30% 30% 30% 30%)' };
-        break;
-      case 18: // IMAGE 19: Upward reveal
-        fromState = { opacity: 0, y: 90 };
-        break;
-      case 19: // IMAGE 20: Final cinematic reveal (scale 0.96 -> 1, subtle parallax)
-        fromState = { opacity: 0, scale: 0.95, y: 50 };
-        toState.scale = 1.0;
-        toState.y = 0;
-        break;
-    }
-    
-    gsap.fromTo(card, fromState, {
-      ...toState,
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 95%',
-        end: 'bottom 20%',
-        scrub: true
-      }
-    });
-  });
-
-  // Cinematic caption reveal triggered with Image 20
-  const cinematicCaption = document.querySelector('.w-card-20-caption');
-  const lastCard = document.querySelector('.gallery-editorial .w-card-20');
-  if (cinematicCaption && lastCard) {
-    gsap.fromTo(cinematicCaption, 
-      { opacity: 0, y: 40 },
-      {
+  // Section 2: Campus Gallery — staggered batch reveal
+  const galleryCards = document.querySelectorAll('.gallery-editorial .gallery-card');
+  if (galleryCards.length > 0) {
+    ScrollTrigger.batch(galleryCards, {
+      onEnter: batch => gsap.fromTo(batch,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'power2.out',
+          stagger: 0.05,
+          overwrite: 'auto'
+        }
+      ),
+      onEnterBack: batch => gsap.to(batch, {
         opacity: 1,
         y: 0,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: lastCard,
-          start: 'top 80%',
-          end: 'bottom 20%',
-          scrub: true
-        }
-      }
-    );
+        duration: 0.5,
+        ease: 'power2.out',
+        stagger: 0.04,
+        overwrite: 'auto'
+      }),
+      onLeaveBack: batch => gsap.to(batch, {
+        opacity: 0,
+        y: 30,
+        duration: 0.4,
+        ease: 'power2.inOut',
+        stagger: 0.03,
+        overwrite: 'auto'
+      }),
+      start: 'top 98%',
+      end: 'bottom 2%'
+    });
   }
+
 
   // Parallax background decorative shapes
   const parallaxItems = document.querySelectorAll('.decor-parallax');
@@ -508,7 +424,11 @@ function openLightbox(elementOrIndex) {
         const src = img ? img.src : '';
         const category = catEl ? catEl.innerText.trim() : '';
         const title = titleEl ? titleEl.innerText.trim() : '';
-        const caption = category && title ? `${category} — ${title}` : (title || category || '');
+        let caption = category && title ? `${category} — ${title}` : (title || category || '');
+        
+        if (!caption && img && img.alt) {
+          caption = img.alt;
+        }
         
         return { src, caption };
       });
