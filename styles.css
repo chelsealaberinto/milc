@@ -1687,9 +1687,10 @@ a {
 
 .footer-top {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  grid-template-columns: 1.6fr 1fr 1fr;
   gap: 40px;
   margin-bottom: 50px;
+  align-items: start;
 }
 
 .footer-brand-column {
@@ -2121,7 +2122,8 @@ a {
   }
   
   .footer-top {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
   
   .gallery-grid {
@@ -2138,92 +2140,298 @@ a {
   :root {
     --section-padding-desktop: var(--section-padding-mobile);
   }
-  
+
+  /* ── Global ── */
+  .container {
+    width: 94%;
+  }
   .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 20px;
   }
-  
-  .navbar-school-name {
-    font-size: 0.95rem;
+  .section-header {
+    margin-bottom: 35px;
   }
-  
-  .navbar-school-name span {
-    font-size: 0.55rem;
-  }
-  
+
+  /* ── Navbar ── */
   .navbar {
-    height: 75px;
+    height: 68px;
   }
-  
+  .navbar.scrolled {
+    height: 60px;
+  }
+  .navbar-logo {
+    height: 42px;
+  }
+  .navbar-school-name {
+    font-size: 0.85rem;
+  }
+  .navbar-school-name span {
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 100svh;
+    align-items: flex-end;
+    padding-bottom: 80px;
+  }
+  .hero .container {
+    margin-top: 0;
+  }
+  .hero-label {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+    letter-spacing: 0.15em;
+  }
+  .hero-title {
+    font-size: clamp(1.9rem, 7vw, 3rem);
+    margin-bottom: 14px;
+  }
+  .hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-scroll {
+    bottom: 20px;
+  }
+  .btn-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .btn-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ── Intro / About ── */
+  .intro-image-wrapper {
+    aspect-ratio: 16/10;
+    border-radius: var(--radius-md);
+  }
+  .intro-image-wrapper::after {
+    display: none;
+  }
   .intro-badge {
-    padding: 10px 18px;
-    bottom: 15px;
-    left: 15px;
+    padding: 10px 14px;
+    bottom: 14px;
+    left: 14px;
   }
-  
   .intro-badge-num {
     font-size: 1.6rem;
   }
-  
-  .student-life-gallery {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 220px;
+  .intro-badge-text {
+    font-size: 0.65rem;
   }
-  
+  .intro-text-column {
+    padding-left: 0;
+  }
+  .intro-quote {
+    font-size: 1.1rem;
+    padding-left: 14px;
+  }
+
+  /* ── Academic Programs ── */
+  .program-panel {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .program-image-side {
+    min-height: 220px;
+    max-height: 260px;
+  }
+  .program-content-side {
+    padding: 24px 18px;
+  }
+
+  /* ── MI (Multiple Intelligence) Section ── */
+  .mi-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .mi-menu {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+  .mi-item {
+    flex-shrink: 0;
+    width: auto;
+  }
+  .mi-btn {
+    padding: 9px 16px;
+    font-size: 0.8rem;
+  }
+  .mi-content-panel {
+    min-height: auto;
+    padding: 24px 16px;
+  }
+  .mi-card-features-list {
+    grid-template-columns: 1fr;
+  }
+  .mi-btn::after {
+    display: none;
+  }
+
+  /* ── Why MILC ── */
+  .why-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .why-sticky-side {
+    position: static;
+  }
+
+  /* ── Moments ── */
+  .moments-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* ── Student Life Gallery ── */
+  .student-life-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
   .gallery-grid-item.wide {
     grid-column: span 1;
   }
-  
   .gallery-grid-item.tall {
     grid-row: span 1;
   }
-  
+
+  /* ── Photo Gallery ── */
   .gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
-  
+
+  /* ── News ── */
   .news-list-item {
     grid-template-columns: 1fr;
-    padding: 12px;
+    padding: 14px;
   }
-  
   .news-list-img-wrap {
-    height: 140px;
+    height: 160px;
   }
-  
+  .news-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* ── Messenger / Contact ── */
   .messenger-section {
-    min-height: 460px;
-    padding: 70px 0;
+    min-height: 400px;
+    padding: 55px 0;
   }
-  
   .messenger-btn {
-    font-size: 0.95rem;
-    padding: 15px 28px;
+    font-size: 0.88rem;
+    padding: 14px 22px;
   }
-  
   .messenger-contact-row {
     flex-direction: column;
     gap: 10px;
   }
-  
   .messenger-contact-divider {
     display: none;
   }
-  
+
+  /* ── CTA ── */
+  .cta {
+    padding: 40px 0 80px;
+  }
+  .cta-value-title {
+    font-size: clamp(1.6rem, 7vw, 2.6rem);
+    white-space: normal;
+    word-break: break-word;
+  }
+  .cta-title {
+    font-size: clamp(1.3rem, 4vw, 2rem);
+  }
+  .cta-desc {
+    font-size: 0.95rem;
+    padding: 0;
+  }
+  .cta .btn-group {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 50px 0 25px;
+  }
   .footer-top {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
   .footer-brand-column {
     padding-right: 0;
+    align-items: flex-start;
   }
-  
+  .footer-logo {
+    height: 75px;
+  }
   .footer-bottom {
     flex-direction: column;
     text-align: center;
     gap: 8px;
+  }
+  .footer-bottom p {
+    font-size: 0.78rem;
+  }
+
+  /* ── Lightbox ── */
+  .lightbox-prev, .lightbox-next {
+    display: none !important;
+  }
+}
+
+/* ── Extra-Small Phones (≤ 480px) ── */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(1.6rem, 8.5vw, 2.2rem);
+  }
+  .hero-label {
+    font-size: 0.65rem;
+  }
+  .btn {
+    padding: 14px 20px;
+    font-size: 0.8rem;
+  }
+  .intro-image-wrapper {
+    aspect-ratio: 4/3;
+  }
+  .moments-grid {
+    grid-template-columns: 1fr;
+  }
+  .student-life-gallery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-value-title {
+    font-size: clamp(1.4rem, 8vw, 2rem);
+  }
+  .footer-logo {
+    height: 65px;
+  }
+  .section-header h2 {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+  .program-image-side {
+    min-height: 180px;
   }
 }
 
