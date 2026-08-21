@@ -502,31 +502,8 @@ function loadMap() {
 }
 
 /* ==========================================================================
-   8. CLIENT-SIDE INQUIRY FORM SUCCESS STATUS SUBMIT
+   8. MESSENGER SECTION — no form handler needed; button links directly to m.me
    ========================================================================== */
-function handleInquirySubmit(event) {
-  event.preventDefault();
-  
-  const parentName = document.getElementById('parent-name').value;
-  const statusMsg = document.getElementById('form-status-msg');
-  const form = document.getElementById('inquiry-form');
-  
-  // Simple validation block
-  if (!parentName) return;
-
-  // Show status success message banner
-  statusMsg.style.display = 'block';
-  statusMsg.innerHTML = `<strong>Inquiry Sent Successfully!</strong> Thank you ${parentName}. An admissions registrar will email you back within 24 hours.`;
-
-  // Reset form after delay
-  setTimeout(() => {
-    form.reset();
-    // Fade out message after 8s
-    setTimeout(() => {
-      statusMsg.style.display = 'none';
-    }, 8000);
-  }, 500);
-}
 
 /* ==========================================================================
    7. INSTITUTIONAL CORE TABBED EXPLORER (About Us content)
