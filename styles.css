@@ -1404,7 +1404,7 @@ a {
 .cta {
   background-color: var(--color-green-deep);
   color: var(--color-white);
-  padding: 120px 0;
+  padding: 50px 0 120px;
   position: relative;
   overflow: hidden;
 }
@@ -1442,8 +1442,23 @@ a {
 
 .cta-title {
   font-size: clamp(2rem, 3.5vw + 0.5rem, 3.2rem);
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   font-weight: 800;
+}
+
+.cta-value-title {
+  font-size: clamp(1.8rem, 5.5vw, 3.8rem);
+  font-weight: 900;
+  color: #f5c518;
+  text-shadow: 0 2px 18px rgba(245, 197, 24, 0.35);
+  margin-top: 0;
+  margin-bottom: 18px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 
 .cta-desc {
@@ -1451,6 +1466,7 @@ a {
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 35px;
   font-weight: 300;
+  text-align: center;
 }
 
 
@@ -1677,52 +1693,51 @@ a {
 }
 
 .footer-brand-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding-right: 30px;
 }
 
 .footer-logo {
-  height: 60px;
+  height: 95px;
   width: auto;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  display: block;
 }
 
-.footer-brand-desc {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.footer-social-links {
-  display: flex;
-  gap: 12px;
-}
-
-.footer-social-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.04);
-  display: flex;
+.footer-follow-link {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  color: var(--color-bg-cream);
-  transition: var(--transition-fast);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: transform 0.2s ease, color 0.2s ease;
+  margin-top: 0;
 }
 
-.footer-social-btn:hover {
-  background-color: var(--color-accent-yellow);
-  color: var(--color-green-deep);
+.footer-follow-link:hover {
+  color: var(--color-accent-yellow);
   transform: translateY(-2px);
-  border-color: var(--color-accent-yellow);
 }
 
-.footer-social-btn svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
+.footer-fb-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer-follow-link:hover .footer-fb-icon {
+  transform: scale(1.08);
+  filter: drop-shadow(0 2px 12px rgba(245, 197, 24, 0.4));
 }
 
 .footer-column-title {
