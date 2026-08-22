@@ -1,0 +1,24 @@
+{
+  "name": "Multiple Intelligence Learning Center",
+  "short_name": "MILC",
+  "description": "Progressive private school in Tanauan City, Batangas offering preschool and elementary programs based on Multiple Intelligences.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#064e3b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/LOGO.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/LOGO.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
