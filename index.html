@@ -4,10 +4,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOMEPAGE | MILC</title>
+  <title>Multiple Intelligence Learning Center (MILC) | Batangas Private School</title>
   <meta name="description"
-    content="Nurturing every mind, developing every potential. Welcome to Multiple Intelligence Learning Center of Tanauan City, Inc., a premium private school dedicated to holistic development.">
+    content="Multiple Intelligence Learning Center of Tanauan City, Batangas (MILC) is a premium private school offering progressive preschool, elementary education, and summer programs based on Howard Gardner's Multiple Intelligences theory.">
   <link rel="icon" type="image/png" href="assets/LOGO.png">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://milctanauan.edu.ph/">
+  <meta property="og:title" content="Multiple Intelligence Learning Center (MILC) | Batangas Private School">
+  <meta property="og:description" content="Multiple Intelligence Learning Center of Tanauan City, Batangas (MILC) is a premium private school offering progressive preschool, elementary education, and summer programs based on Howard Gardner's Multiple Intelligences theory.">
+  <meta property="og:image" content="https://milctanauan.edu.ph/assets/MILCHeader.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://milctanauan.edu.ph/">
+  <meta property="twitter:title" content="Multiple Intelligence Learning Center (MILC) | Batangas Private School">
+  <meta property="twitter:description" content="Multiple Intelligence Learning Center of Tanauan City, Batangas (MILC) is a premium private school offering progressive preschool, elementary education, and summer programs based on Howard Gardner's Multiple Intelligences theory.">
+  <meta property="twitter:image" content="https://milctanauan.edu.ph/assets/MILCHeader.png">
+
+  <!-- Structured Data / JSON-LD Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "School",
+    "name": "Multiple Intelligence Learning Center of Tanauan City, Inc.",
+    "alternateName": "MILC",
+    "url": "https://milctanauan.edu.ph/",
+    "logo": "https://milctanauan.edu.ph/assets/LOGO.png",
+    "image": "https://milctanauan.edu.ph/assets/MILCHeader.png",
+    "description": "A premium private school in Tanauan City, Batangas, Philippines, dedicated to holistic student development based on Dr. Howard Gardner's theory of Multiple Intelligences.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "A. Mabini Ave, Poblacion 1",
+      "addressLocality": "Tanauan",
+      "addressRegion": "Batangas",
+      "postalCode": "4232",
+      "addressCountry": "PH"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "14.0782",
+      "longitude": "121.1509"
+    },
+    "telephone": "+63-969-319-7941",
+    "email": "milc2008@yahoo.com",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Educational Programs",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "EducationalProgram",
+            "name": "Early Childhood Education",
+            "description": "Preschool programs covering Toddler, Nursery, Kinder, and Preparatory levels focusing on sensory, social, and motor development."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "EducationalProgram",
+            "name": "Elementary Education",
+            "description": "Primary school programs from Grades 1 to 6 reinforcing mathematical, language, computer literacy, and civic science foundations."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "EducationalProgram",
+            "name": "Summer Class Program",
+            "description": "Enriching summer activities including arts and crafts, physical development, and academic reinforcement."
+          }
+        }
+      ]
+    },
+    "sameAs": [
+      "https://www.facebook.com/MILCTanauan2003"
+    ]
+  }
+  </script>
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,10 +96,10 @@
     <div class="container">
       <a href="#home" class="navbar-brand">
         <img src="assets/MILCLogo.jpg" alt="MILC Logo" class="navbar-logo" id="nav-logo">
-        <h1 class="navbar-school-name">
+        <div class="navbar-school-name">
           MULTIPLE INTELLIGENCE
           <span>Learning Center</span>
-        </h1>
+        </div>
       </a>
 
       <!-- Desktop & Mobile Menu -->
@@ -90,6 +167,7 @@
   </section>
 
   <main>
+    <h1 class="visually-hidden">Multiple Intelligence Learning Center (MILC) - Private School in Tanauan City, Batangas</h1>
     <!-- --- INTRODUCTION SECTION --- -->
     <section class="section" id="about">
       <!-- Decorative Organic Shapes -->
@@ -377,7 +455,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-1" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O1.jpg">
+                <img src="assets/O1.jpg" alt="Collaborative Science Projects — Active, hands-on classroom experiments at Multiple Intelligence Learning Center" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -394,7 +472,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-2" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O2.jpg">
+                <img src="assets/O2.jpg" alt="Visual Arts Studio — Nurturing spatial creativity through sculpting and painting at MILC" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -411,7 +489,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-3" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O3.jpg">
+                <img src="assets/O3.jpg" alt="Orchestral Training — Group instrumental and music performance training for students" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -428,7 +506,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-4" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O4.jpg">
+                <img src="assets/O4.jpg" alt="Physical Development Program — Physical education and active outdoor sports activities" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -445,7 +523,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-5" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O5.jpg" alt="Students working outdoors studying plants">
+                <img src="assets/O5.jpg" alt="Eco-Garden Studies — Outdoors planting and environmental nature studies for learners" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -462,7 +540,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-6" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O6.jpg">
+                <img src="assets/O6.jpg" alt="Student Interaction Fields — Enhancing social skills during active recreation breaks" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -479,7 +557,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-7" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O7.jpg">
+                <img src="assets/O7.jpg" alt="Classroom Arts Showcase — Students exhibiting their creative drawing projects" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -496,7 +574,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-8" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O8.jpg">
+                <img src="assets/O8.jpg" alt="Outdoor Activities — Playful physical learning in a warm school yard with teachers" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -513,7 +591,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-9" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O9.jpg">
+                <img src="assets/O9.jpg" alt="Excellence & Achievements — Celebrating student academic learning milestones and medals" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -530,7 +608,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-10" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O10.jpg">
+                <img src="assets/O10.jpg" alt="Primary Library Studies — Pupils reading books and enhancing research capabilities" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -547,7 +625,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-11" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O11.jpg">
+                <img src="assets/O11.jpg" alt="Educational Excursions — Learning outside the classroom via environmental discovery" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -564,7 +642,7 @@
           <div class="moment-card-wrapper">
             <div class="moment-card moments-card-12" onclick="openLightbox(this)">
               <div class="moment-card-img-wrap">
-                <img src="assets/O12.jpg">
+                <img src="assets/O12.jpg" alt="Creative Classrooms — Integrating group cooperation, design projects, and spatial skills" loading="lazy" decoding="async">
                 <div class="moment-card-overlay">
                   <div class="moment-card-zoom-icon">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -608,7 +686,7 @@
           <!-- Program 1: Early Childhood -->
           <div class="program-panel reveal-up">
             <div class="program-image-side">
-              <img src="assets/preschool.jpg" alt="Toddlers learning in preschool" class="program-img">
+              <img src="assets/preschool.jpg" alt="Preschool students learning through sensory play activities at Multiple Intelligence Learning Center Batangas" class="program-img" loading="lazy" decoding="async">
               <div class="program-image-overlay"></div>
             </div>
             <div class="program-content-side">
@@ -628,8 +706,7 @@
           <!-- Program 2: Elementary -->
           <div class="program-panel reveal-up">
             <div class="program-image-side">
-              <img src="assets/elem.jpg" alt="Elementary school students studying in group classroom"
-                class="program-img">
+              <img src="assets/elem.jpg" alt="Elementary school students studying in group classroom at Multiple Intelligence Learning Center Tanauan" class="program-img" loading="lazy" decoding="async">
               <div class="program-image-overlay"></div>
             </div>
             <div class="program-content-side">
@@ -650,7 +727,7 @@
           <!-- Program 3: Summer Classes -->
           <div class="program-panel reveal-up">
             <div class="program-image-side">
-              <img src="assets/summer.jpg" alt="MILC students during summer class program" class="program-img">
+              <img src="assets/summer.jpg" alt="Students participating in summer class program activities at Multiple Intelligence Learning Center Batangas" class="program-img" loading="lazy" decoding="async">
               <div class="program-image-overlay"></div>
             </div>
             <div class="program-content-side">
@@ -696,7 +773,7 @@
         <div class="student-life-gallery reveal-up">
 
           <div class="gallery-grid-item wide tall" onclick="openLightbox(this)">
-            <img src="assets/L1.jpg" alt="Performance Arts at MILC" class="gallery-img">
+            <img src="assets/L1.jpg" alt="Creative stage expression and performing arts at Multiple Intelligence Learning Center" class="gallery-img" loading="lazy" decoding="async">
             <div class="gallery-grid-item-overlay">
               <span class="gallery-grid-item-category">Performance Arts</span>
               <h4 class="gallery-grid-item-title">Creative Stage & Expression</h4>
@@ -704,7 +781,7 @@
           </div>
 
           <div class="gallery-grid-item" onclick="openLightbox(this)">
-            <img src="assets/L2.jpg" alt="Student reading inside library" class="gallery-img">
+            <img src="assets/L2.jpg" alt="Student reading inside library and learning lab at MILC" class="gallery-img" loading="lazy" decoding="async">
             <div class="gallery-grid-item-overlay">
               <span class="gallery-grid-item-category">Reading</span>
               <h4 class="gallery-grid-item-title">Literacy & Learning Labs</h4>
@@ -712,7 +789,7 @@
           </div>
 
           <div class="gallery-grid-item tall" onclick="openLightbox(this)">
-            <img src="assets/L3.jpg" alt="Cooking activities at MILC" class="gallery-img">
+            <img src="assets/L3.jpg" alt="Practical culinary and cooking skills workshop for students at MILC" class="gallery-img" loading="lazy" decoding="async">
             <div class="gallery-grid-item-overlay">
               <span class="gallery-grid-item-category">Cooking</span>
               <h4 class="gallery-grid-item-title">Practical Culinary Skills</h4>
@@ -720,7 +797,7 @@
           </div>
 
           <div class="gallery-grid-item wide" onclick="openLightbox(this)">
-            <img src="assets/L4.jpg" alt="Sports and physical development" class="gallery-img">
+            <img src="assets/L4.jpg" alt="Physical athletics, sports, and outdoor play activities for students at MILC" class="gallery-img" loading="lazy" decoding="async">
             <div class="gallery-grid-item-overlay">
               <span class="gallery-grid-item-category">Sports</span>
               <h4 class="gallery-grid-item-title">Physical Athletics & Play</h4>
@@ -728,7 +805,7 @@
           </div>
 
           <div class="gallery-grid-item" onclick="openLightbox(this)">
-            <img src="assets/L5.jpg" alt="Children playing together" class="gallery-img">
+            <img src="assets/L5.jpg" alt="Nursery children playing together during recreational social play at MILC" class="gallery-img" loading="lazy" decoding="async">
             <div class="gallery-grid-item-overlay">
               <span class="gallery-grid-item-category">Playing</span>
               <h4 class="gallery-grid-item-title">Recreational Social Play</h4>
@@ -765,7 +842,7 @@
         <div class="gallery-editorial reveal-up">
 
           <div class="gallery-card w-card-1" onclick="openLightbox(this)">
-            <img src="assets/W1.jpg" alt="School Life Activity">
+            <img src="assets/W1.jpg" alt="Preschool student playing with educational blocks at Multiple Intelligence Learning Center" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -777,7 +854,7 @@
           </div>
 
           <div class="gallery-card w-card-2" onclick="openLightbox(this)">
-            <img src="assets/W2.jpg" alt="School Life Activity">
+            <img src="assets/W2.jpg" alt="Primary class students doing group research projects at MILC Tanauan" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -789,7 +866,7 @@
           </div>
 
           <div class="gallery-card w-card-3" onclick="openLightbox(this)">
-            <img src="assets/W3.jpg" alt="School Life Activity">
+            <img src="assets/W3.jpg" alt="Creative student coloring and painting during art class at Multiple Intelligence Learning Center" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -801,7 +878,7 @@
           </div>
 
           <div class="gallery-card w-card-4" onclick="openLightbox(this)">
-            <img src="assets/W4.jpg" alt="School Life Activity">
+            <img src="assets/W4.jpg" alt="Active students exercising and developing motor skills in the school playground" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -813,7 +890,7 @@
           </div>
 
           <div class="gallery-card w-card-5" onclick="openLightbox(this)">
-            <img src="assets/W5.jpg" alt="School Life Activity">
+            <img src="assets/W5.jpg" alt="Elementary class music lesson with kids learning rhythm and songs at MILC" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -825,7 +902,7 @@
           </div>
 
           <div class="gallery-card w-card-6" onclick="openLightbox(this)">
-            <img src="assets/W6.jpg" alt="School Life Activity">
+            <img src="assets/W6.jpg" alt="Interactive math learning session using visual blocks for preschool kids" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -837,7 +914,7 @@
           </div>
 
           <div class="gallery-card w-card-7" onclick="openLightbox(this)">
-            <img src="assets/W7.jpg" alt="School Life Activity">
+            <img src="assets/W7.jpg" alt="Nursery children doing sensory painting exercises with their hands at MILC" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -849,7 +926,7 @@
           </div>
 
           <div class="gallery-card w-card-8" onclick="openLightbox(this)">
-            <img src="assets/W8.jpg" alt="School Life Activity">
+            <img src="assets/W8.jpg" alt="Elementary kids presenting their science fair experiment at MILC Batangas" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -861,7 +938,7 @@
           </div>
 
           <div class="gallery-card w-card-9" onclick="openLightbox(this)">
-            <img src="assets/W9.jpg" alt="School Life Activity">
+            <img src="assets/W9.jpg" alt="Classroom reading session with students sharing stories at Multiple Intelligence Learning Center" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -873,7 +950,7 @@
           </div>
 
           <div class="gallery-card w-card-10" onclick="openLightbox(this)">
-            <img src="assets/W10.jpg" alt="School Life Activity">
+            <img src="assets/W10.jpg" alt="Primary learners writing essays during English class at MILC Batangas" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -885,7 +962,7 @@
           </div>
 
           <div class="gallery-card w-card-11" onclick="openLightbox(this)">
-            <img src="assets/W11.jpg" alt="School Life Activity">
+            <img src="assets/W11.jpg" alt="Toddlers exploring nature and leaves in the school garden" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -897,7 +974,7 @@
           </div>
 
           <div class="gallery-card w-card-12" onclick="openLightbox(this)">
-            <img src="assets/W12.jpg" alt="School Life Activity">
+            <img src="assets/W12.jpg" alt="Elementary graduation ceremony celebrating achievements at MILC Tanauan" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -909,7 +986,7 @@
           </div>
 
           <div class="gallery-card w-card-13" onclick="openLightbox(this)">
-            <img src="assets/W13.jpg" alt="School Life Activity">
+            <img src="assets/W13.jpg" alt="Students practicing writing on the blackboard during class activities" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -921,7 +998,7 @@
           </div>
 
           <div class="gallery-card w-card-14" onclick="openLightbox(this)">
-            <img src="assets/W14.jpg" alt="School Life Activity">
+            <img src="assets/W14.jpg" alt="Visual arts and crafts creations displayed in the school lobby" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -933,7 +1010,7 @@
           </div>
 
           <div class="gallery-card w-card-15" onclick="openLightbox(this)">
-            <img src="assets/W15.jpg" alt="School Life Activity">
+            <img src="assets/W15.jpg" alt="Sports activities with students running and exercising outdoors" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -945,7 +1022,7 @@
           </div>
 
           <div class="gallery-card w-card-16" onclick="openLightbox(this)">
-            <img src="assets/W16.jpg" alt="School Life Activity">
+            <img src="assets/W16.jpg" alt="Pre-kinder children matching colorful shapes during visual learning session" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -957,7 +1034,7 @@
           </div>
 
           <div class="gallery-card w-card-17" onclick="openLightbox(this)">
-            <img src="assets/W17.jpg" alt="School Life Activity">
+            <img src="assets/W17.jpg" alt="Elementary school library reading corner filled with books for children" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -969,7 +1046,7 @@
           </div>
 
           <div class="gallery-card w-card-18" onclick="openLightbox(this)">
-            <img src="assets/W18.jpg" alt="School Life Activity">
+            <img src="assets/W18.jpg" alt="Group discussion and collaborative project brainstorming in grade 5 class" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -981,7 +1058,7 @@
           </div>
 
           <div class="gallery-card w-card-19" onclick="openLightbox(this)">
-            <img src="assets/W19.jpg" alt="School Life Activity">
+            <img src="assets/W19.jpg" alt="Student cooking demonstration and nutrition lessons in practical skills class" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -993,7 +1070,7 @@
           </div>
 
           <div class="gallery-card w-card-20" onclick="openLightbox(this)">
-            <img src="assets/W20.jpg" alt="School Life Activity">
+            <img src="assets/W20.jpg" alt="Kindergarten children singing along with musical instruments at MILC" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -1005,7 +1082,7 @@
           </div>
 
           <div class="gallery-card w-card-21" onclick="openLightbox(this)">
-            <img src="assets/W21.jpg" alt="School Life Activity">
+            <img src="assets/W21.jpg" alt="Outdoor nature walk and botany study in Batangas eco-garden" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -1017,7 +1094,7 @@
           </div>
 
           <div class="gallery-card w-card-22" onclick="openLightbox(this)">
-            <img src="assets/W22.jpg" alt="School Life Activity">
+            <img src="assets/W22.jpg" alt="Educational games and puzzle solving for cognitive development" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -1029,7 +1106,7 @@
           </div>
 
           <div class="gallery-card w-card-23" onclick="openLightbox(this)">
-            <img src="assets/W23.jpg" alt="School Life Activity">
+            <img src="assets/W23.jpg" alt="Art workshop session with kids painting canvases at Multiple Intelligence Learning Center" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -1041,7 +1118,7 @@
           </div>
 
           <div class="gallery-card w-card-24" onclick="openLightbox(this)">
-            <img src="assets/W24.jpg" alt="School Life Activity">
+            <img src="assets/W24.jpg" alt="Students doing morning physical exercises and active stretches in school yard" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -1053,7 +1130,7 @@
           </div>
 
           <div class="gallery-card w-card-25" onclick="openLightbox(this)">
-            <img src="assets/W25.jpg" alt="School Life Activity">
+            <img src="assets/W25.jpg" alt="Creative drama and roleplay activity on stage by elementary learners" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -1065,7 +1142,7 @@
           </div>
 
           <div class="gallery-card w-card-26" onclick="openLightbox(this)">
-            <img src="assets/W26.jpg" alt="School Life Activity">
+            <img src="assets/W26.jpg" alt="Classroom library book browsing by enthusiastic young readers" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -1077,7 +1154,7 @@
           </div>
 
           <div class="gallery-card w-card-27" onclick="openLightbox(this)">
-            <img src="assets/W27.jpg" alt="School Life Activity">
+            <img src="assets/W27.jpg" alt="Student studying map during geography and social studies lesson" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -1089,7 +1166,7 @@
           </div>
 
           <div class="gallery-card w-card-28" onclick="openLightbox(this)">
-            <img src="assets/W28.jpg" alt="School Life Activity">
+            <img src="assets/W28.jpg" alt="Preschool kids dancing and learning coordination during physical activity" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -1101,7 +1178,7 @@
           </div>
 
           <div class="gallery-card w-card-29" onclick="openLightbox(this)">
-            <img src="assets/W29.jpg" alt="School Life Activity">
+            <img src="assets/W29.jpg" alt="Science lab experiments demonstrating water properties to primary students" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">
@@ -1113,7 +1190,7 @@
           </div>
 
           <div class="gallery-card w-card-30" onclick="openLightbox(this)">
-            <img src="assets/W30.jpg" alt="School Life Activity">
+            <img src="assets/W30.jpg" alt="Creative design projects and building models class at MILC" loading="lazy" decoding="async">
             <div class="gallery-card-overlay">
               <div class="gallery-card-icon">
                 <svg viewBox="0 0 24 24">

@@ -1,0 +1,8 @@
+# robots.txt for Multiple Intelligence Learning Center (MILC)
+# Prepared for organic Google Search indexing
+
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://milctanauan.edu.ph/sitemap.xml
