@@ -1,0 +1,23 @@
+name: Deploy to Infinity Free FTP
+
+on:
+  push:
+    branches:
+      - main # Or your default branch (sometimes 'master')
+
+jobs:
+  web-deploy:
+    name: Deploy to Infinity Free
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v3
+
+      - name: Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Infinity Free uses htdocs as the public root folder
+          server-dir: /htdocs/
