@@ -19,5 +19,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Infinity Free uses htdocs as the public root folder
-          server-dir: /htdocs/
+          # Infinity Free uses a separate htdocs folder for addon domains
+          server-dir: /milctanauan.page.gd/htdocs/
